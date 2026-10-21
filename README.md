@@ -1,6 +1,6 @@
 # fortnite-map-copilot
 
-An AI copilot for building Fortnite maps (Fortnite is an online game that lets players build and publish their own games inside it). It works with UEFN, the editor used to make Fortnite maps, writes Verse code and does editor work directly, such as placing props, tagging them for Verse, wiring meshes to entity prefabs, exporting textures for visual identification and searching the project's Verse API digests.
+An AI copilot for building Fortnite maps. It works with UEFN, the editor Fortnite maps are made in, writes Verse code and does editor work directly, such as placing props, tagging them for Verse, wiring meshes to entity prefabs, exporting textures for visual identification and searching the project's Verse API digests.
 
 I built it around methods I had already used on a real project, a store with 87 shelf bays and 128 product entities, plus a full mesh-pack migration. It is about 2,390 lines of Python across 8 files (version 0.1.0, July 2026). The Python package and the command keep their original name, `uefn-agent`.
 
@@ -128,3 +128,7 @@ agent behavior.
   release.
 - One heavy asset op per call by design; expect ~7-16s per prefab
   (Blueprint compile dominates).
+
+## License
+
+MIT, see [LICENSE](LICENSE).
