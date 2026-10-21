@@ -1,0 +1,24 @@
+[project]
+name = "uefn-agent"
+version = "0.1.0"
+description = "AI copilot for UEFN map development: Verse codegen + editor automation via a typed MCP tool layer and the Claude Agent SDK."
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0",
+    "requests>=2.31",
+    "claude-agent-sdk",
+]
+
+[project.scripts]
+uefn-agent = "uefn_agent.cli:main"
+uefn-agent-mcp = "uefn_agent.mcp_server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["uefn_agent"]
+
+[tool.setuptools.package-data]
+uefn_agent = ["knowledge/*.md", "skills/*/SKILL.md", "listener/*.py", "listener/*.md"]
